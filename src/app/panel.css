@@ -1,0 +1,156 @@
+/* ─── Panel Ortak Stilleri ───────────────────────────────────────────────────── */
+
+.panel-sayfa {
+  min-height: calc(100vh - 64px);
+  background-color: var(--renk-krem);
+  padding: var(--bosluk-8) 0 var(--bosluk-16);
+}
+
+/* Panel üst başlık */
+.panel-ust-baslik {
+  margin-bottom: var(--bosluk-8);
+}
+
+.panel-ust-baslik h1 {
+  font-size: var(--boyut-3xl);
+  margin-bottom: var(--bosluk-1);
+}
+
+.panel-ust-baslik p {
+  color: var(--renk-metin-ince);
+  font-size: var(--boyut-md);
+}
+
+/* İstatistik kartları */
+.istatistik-kartlari {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--bosluk-4);
+  margin-bottom: var(--bosluk-8);
+}
+
+@media (min-width: 480px) {
+  .istatistik-kartlari { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 768px) {
+  .istatistik-kartlari { grid-template-columns: repeat(3, 1fr); }
+}
+
+.istatistik-kart {
+  background: var(--renk-beyaz);
+  border: 1px solid var(--renk-krem-sinir);
+  border-radius: var(--yuvarlak-xl);
+  padding: var(--bosluk-6);
+  box-shadow: var(--golge-sm);
+}
+
+.istatistik-kart-ikon {
+  font-size: 1.75rem;
+  margin-bottom: var(--bosluk-3);
+}
+
+.istatistik-kart-sayi {
+  font-family: var(--font-baslik);
+  font-size: var(--boyut-4xl);
+  font-weight: 700;
+  color: var(--renk-kahve);
+  line-height: 1;
+  margin-bottom: var(--bosluk-1);
+}
+
+.istatistik-kart-etiket {
+  font-size: var(--boyut-sm);
+  color: var(--renk-metin-ince);
+}
+
+/* Panel bölüm */
+.panel-bolum {
+  background: var(--renk-beyaz);
+  border: 1px solid var(--renk-krem-sinir);
+  border-radius: var(--yuvarlak-xl);
+  box-shadow: var(--golge-sm);
+  overflow: hidden;
+  margin-bottom: var(--bosluk-6);
+}
+
+.panel-bolum-baslik {
+  padding: var(--bosluk-5) var(--bosluk-6);
+  border-bottom: 1px solid var(--renk-krem-sinir);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel-bolum-baslik h2 {
+  font-size: var(--boyut-lg);
+  font-family: var(--font-ana);
+  font-weight: 700;
+}
+
+/* Randevu listesi */
+.randevu-listesi {
+  display: flex;
+  flex-direction: column;
+}
+
+.randevu-satiri {
+  padding: var(--bosluk-4) var(--bosluk-6);
+  border-bottom: 1px solid var(--renk-krem-sinir);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--bosluk-3);
+  transition: background-color var(--gecis-hizli);
+}
+
+.randevu-satiri:last-child { border-bottom: none; }
+.randevu-satiri:hover { background-color: var(--renk-krem); }
+
+.randevu-satiri-sol {
+  display: flex;
+  align-items: center;
+  gap: var(--bosluk-4);
+}
+
+.randevu-saat-badge {
+  background-color: var(--renk-kahve);
+  color: var(--renk-beyaz);
+  font-size: var(--boyut-xs);
+  font-weight: 700;
+  padding: var(--bosluk-1) var(--bosluk-3);
+  border-radius: var(--yuvarlak-md);
+  white-space: nowrap;
+  font-family: var(--font-baslik);
+}
+
+.randevu-musteri-adi {
+  font-weight: 600;
+  font-size: var(--boyut-md);
+}
+
+.randevu-hizmet-adi {
+  font-size: var(--boyut-sm);
+  color: var(--renk-metin-ince);
+}
+
+.randevu-satiri-sag {
+  display: flex;
+  align-items: center;
+  gap: var(--bosluk-2);
+}
+
+/* Durum butonları */
+.durum-btn-grubu {
+  display: flex;
+  gap: var(--bosluk-2);
+}
+
+/* Bos panel */
+.panel-bos {
+  padding: var(--bosluk-10);
+  text-align: center;
+  color: var(--renk-metin-soluk);
+  font-size: var(--boyut-sm);
+}

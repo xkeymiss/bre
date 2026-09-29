@@ -1,0 +1,167 @@
+/* ─── Giriş / Kayıt Sayfaları Ortak Stilleri ──────────────────────────────── */
+
+.auth-sayfa {
+  min-height: calc(100vh - 64px); /* navbar yüksekliği düşülür */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--bosluk-8) var(--bosluk-4);
+}
+
+.auth-kart {
+  width: 100%;
+  max-width: 440px;
+  background-color: var(--renk-beyaz);
+  border: 1px solid var(--renk-krem-sinir);
+  border-radius: var(--yuvarlak-2xl);
+  box-shadow: var(--golge-lg);
+  padding: var(--bosluk-10) var(--bosluk-8);
+}
+
+@media (max-width: 480px) {
+  .auth-kart {
+    padding: var(--bosluk-8) var(--bosluk-5);
+  }
+}
+
+/* Logo / Başlık */
+.auth-logo {
+  font-family: var(--font-baslik);
+  font-size: var(--boyut-3xl);
+  color: var(--renk-kahve);
+  text-align: center;
+  margin-bottom: var(--bosluk-2);
+  display: block;
+  text-decoration: none;
+}
+
+.auth-baslik {
+  font-size: var(--boyut-2xl);
+  text-align: center;
+  margin-bottom: var(--bosluk-2);
+  font-family: var(--font-baslik);
+}
+
+.auth-alt-baslik {
+  font-size: var(--boyut-sm);
+  color: var(--renk-metin-ince);
+  text-align: center;
+  margin-bottom: var(--bosluk-8);
+}
+
+/* Form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bosluk-5);
+}
+
+/* İsim alanları yan yana */
+.auth-isim-satiri {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--bosluk-3);
+}
+
+/* Hata mesajı kutusu */
+.auth-hata-kutusu {
+  background-color: var(--renk-hata-acik);
+  border: 1px solid #F5C6C4;
+  border-radius: var(--yuvarlak-md);
+  padding: var(--bosluk-3) var(--bosluk-4);
+  font-size: var(--boyut-sm);
+  color: var(--renk-hata);
+  display: flex;
+  align-items: center;
+  gap: var(--bosluk-2);
+}
+
+/* Başarı mesajı kutusu */
+.auth-basari-kutusu {
+  background-color: var(--renk-basari-acik);
+  border: 1px solid #B8D9C3;
+  border-radius: var(--yuvarlak-md);
+  padding: var(--bosluk-3) var(--bosluk-4);
+  font-size: var(--boyut-sm);
+  color: var(--renk-basari);
+  display: flex;
+  align-items: center;
+  gap: var(--bosluk-2);
+}
+
+/* Ayırıcı çizgi + "veya" */
+.auth-ayirici {
+  display: flex;
+  align-items: center;
+  gap: var(--bosluk-3);
+  margin-block: var(--bosluk-2);
+}
+
+.auth-ayirici::before,
+.auth-ayirici::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--renk-krem-sinir);
+}
+
+.auth-ayirici span {
+  font-size: var(--boyut-xs);
+  color: var(--renk-metin-soluk);
+  white-space: nowrap;
+}
+
+/* Alt bağlantı ("Hesabın yok mu? Kayıt ol") */
+.auth-alt-link {
+  text-align: center;
+  font-size: var(--boyut-sm);
+  color: var(--renk-metin-ince);
+  margin-top: var(--bosluk-4);
+}
+
+.auth-alt-link a {
+  color: var(--renk-kahve);
+  font-weight: 600;
+}
+
+.auth-alt-link a:hover {
+  text-decoration: underline;
+}
+
+/* Şifre alanı görünürlük butonu */
+.sifre-alani {
+  position: relative;
+}
+
+.sifre-goster-btn {
+  position: absolute;
+  right: var(--bosluk-3);
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--renk-metin-soluk);
+  padding: var(--bosluk-1);
+  display: flex;
+  align-items: center;
+  transition: color var(--gecis-hizli);
+}
+
+.sifre-goster-btn:hover {
+  color: var(--renk-metin-ince);
+}
+
+.sifre-alani .form-girdi {
+  padding-right: var(--bosluk-10);
+}
+
+/* Başarı mesaj kutusu */
+.auth-basari-kutusu {
+  background-color: var(--renk-basari-acik);
+  border: 1px solid var(--renk-basari);
+  border-radius: var(--yuvarlak-md);
+  padding: var(--bosluk-3) var(--bosluk-4);
+  font-size: var(--boyut-sm);
+  color: var(--renk-basari);
+  font-weight: 500;
+}

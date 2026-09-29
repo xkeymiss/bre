@@ -1,0 +1,170 @@
+/* Ana Sayfa Stilleri */
+
+/* ─── Hero Bölümü ────────────────────────────────────────────────────────────── */
+.hero {
+  padding: var(--bosluk-16) 0 var(--bosluk-12);
+  text-align: center;
+}
+
+.hero-ust-etiket {
+  display: inline-block;
+  background-color: var(--renk-krem-koyu);
+  color: var(--renk-kahve);
+  font-size: var(--boyut-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: var(--bosluk-2) var(--bosluk-4);
+  border-radius: var(--yuvarlak-tam);
+  margin-bottom: var(--bosluk-6);
+}
+
+.hero-baslik {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  color: var(--renk-metin);
+  line-height: 1.1;
+  margin-bottom: var(--bosluk-5);
+  max-width: 720px;
+  margin-inline: auto;
+  margin-bottom: var(--bosluk-5);
+}
+
+.hero-baslik span {
+  color: var(--renk-kahve);
+}
+
+.hero-aciklama {
+  font-size: var(--boyut-lg);
+  color: var(--renk-metin-ince);
+  max-width: 520px;
+  margin-inline: auto;
+  margin-bottom: var(--bosluk-10);
+}
+
+/* ─── Arama Kutusu ───────────────────────────────────────────────────────────── */
+.arama-formu {
+  background-color: var(--renk-beyaz);
+  border: 1px solid var(--renk-krem-sinir);
+  border-radius: var(--yuvarlak-2xl);
+  padding: var(--bosluk-4);
+  box-shadow: var(--golge-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--bosluk-3);
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+  .arama-formu {
+    flex-direction: row;
+    align-items: center;
+    padding: var(--bosluk-3) var(--bosluk-3) var(--bosluk-3) var(--bosluk-5);
+  }
+
+  .arama-formu .form-girdi {
+    border: none;
+    padding-inline: 0;
+    flex: 1;
+  }
+
+  .arama-formu .form-girdi:focus {
+    box-shadow: none;
+  }
+
+  .arama-ayirici {
+    display: block;
+    width: 1px;
+    height: 28px;
+    background-color: var(--renk-krem-sinir);
+    flex-shrink: 0;
+  }
+}
+
+.arama-ayirici {
+  display: none;
+}
+
+/* ─── İstatistikler ──────────────────────────────────────────────────────────── */
+.istatistikler {
+  display: flex;
+  justify-content: center;
+  gap: var(--bosluk-8);
+  margin-top: var(--bosluk-12);
+  flex-wrap: wrap;
+}
+
+.istatistik-item {
+  text-align: center;
+}
+
+.istatistik-sayi {
+  font-family: var(--font-baslik);
+  font-size: var(--boyut-3xl);
+  font-weight: 700;
+  color: var(--renk-kahve);
+  line-height: 1;
+}
+
+.istatistik-etiket {
+  font-size: var(--boyut-sm);
+  color: var(--renk-metin-soluk);
+  margin-top: var(--bosluk-1);
+}
+
+/* ─── Nasıl Çalışır ──────────────────────────────────────────────────────────── */
+.nasil-calisir {
+  padding: var(--bosluk-16) 0;
+  background-color: var(--renk-krem-koyu);
+}
+
+.adimlar-listesi {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--bosluk-6);
+  margin-top: var(--bosluk-10);
+}
+
+@media (min-width: 768px) {
+  .adimlar-listesi {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.adim-karti {
+  background-color: var(--renk-beyaz);
+  border-radius: var(--yuvarlak-xl);
+  padding: var(--bosluk-8);
+  text-align: center;
+  border: 1px solid var(--renk-krem-sinir);
+}
+
+.adim-numara {
+  width: 48px;
+  height: 48px;
+  background-color: var(--renk-kahve);
+  color: var(--renk-beyaz);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-baslik);
+  font-size: var(--boyut-xl);
+  font-weight: 700;
+  margin: 0 auto var(--bosluk-5);
+}
+
+.adim-baslik {
+  font-size: var(--boyut-lg);
+  font-weight: 600;
+  color: var(--renk-metin);
+  margin-bottom: var(--bosluk-3);
+  font-family: var(--font-ana);
+}
+
+.adim-aciklama {
+  font-size: var(--boyut-sm);
+  color: var(--renk-metin-ince);
+  line-height: 1.7;
+}

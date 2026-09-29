@@ -1,0 +1,109 @@
+/* Navbar stilleri */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(250, 247, 242, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--renk-krem-sinir);
+}
+
+.navbar-ic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.navbar-logo {
+  font-family: var(--font-baslik);
+  font-size: var(--boyut-2xl);
+  font-weight: 700;
+  color: var(--renk-kahve);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.navbar-logo:hover {
+  color: var(--renk-kahve-koyu);
+}
+
+.navbar-menu {
+  display: none;
+  align-items: center;
+  gap: var(--bosluk-2);
+}
+
+@media (min-width: 768px) {
+  .navbar-menu {
+    display: flex;
+  }
+}
+
+.navbar-link {
+  padding: var(--bosluk-2) var(--bosluk-3);
+  font-size: var(--boyut-sm);
+  font-weight: 500;
+  color: var(--renk-metin-ince);
+  border-radius: var(--yuvarlak-md);
+  transition: all var(--gecis-hizli);
+}
+
+.navbar-link:hover {
+  color: var(--renk-kahve);
+  background-color: var(--renk-krem-koyu);
+}
+
+.navbar-mobil-menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: var(--yuvarlak-md);
+  color: var(--renk-metin);
+  transition: background-color var(--gecis-hizli);
+}
+
+.navbar-mobil-menu-btn:hover {
+  background-color: var(--renk-krem-koyu);
+}
+
+@media (min-width: 768px) {
+  .navbar-mobil-menu-btn {
+    display: none;
+  }
+}
+
+/* Mobil dropdown menü */
+.navbar-mobil-dropdown {
+  display: none;
+  flex-direction: column;
+  border-top: 1px solid var(--renk-krem-sinir);
+  padding: var(--bosluk-3);
+  gap: var(--bosluk-1);
+}
+
+.navbar-mobil-dropdown.acik {
+  display: flex;
+}
+
+.navbar-mobil-link {
+  padding: var(--bosluk-3) var(--bosluk-4);
+  font-size: var(--boyut-md);
+  font-weight: 500;
+  color: var(--renk-metin-ince);
+  border-radius: var(--yuvarlak-md);
+  transition: all var(--gecis-hizli);
+  text-decoration: none;
+  display: block;
+}
+
+.navbar-mobil-link:hover {
+  color: var(--renk-kahve);
+  background-color: var(--renk-krem-koyu);
+}

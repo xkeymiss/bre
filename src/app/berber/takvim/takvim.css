@@ -1,0 +1,290 @@
+/* ─── Berber Takvim Sayfası Stilleri ─────────────────────────────────────── */
+
+/* Navigasyon */
+.takvim-navigasyon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bosluk-4);
+  margin-bottom: var(--bosluk-4);
+  padding: var(--bosluk-3) var(--bosluk-5);
+  background: var(--renk-beyaz);
+  border: 1px solid var(--renk-krem-sinir);
+  border-radius: var(--yuvarlak-xl);
+}
+
+.takvim-donem-baslik {
+  font-family: var(--font-baslik);
+  font-weight: 700;
+  font-size: var(--boyut-md);
+  color: var(--renk-metin);
+}
+
+.takvim-kapsayici {
+  background: var(--renk-beyaz);
+  border: 1px solid var(--renk-krem-sinir);
+  border-radius: var(--yuvarlak-xl);
+  overflow: hidden;
+}
+
+/* ── Haftalık Görünüm ──────────────────────────────────────────────────────── */
+.takvim-haftalik {
+  overflow-x: auto;
+}
+
+.takvim-gun-basliklar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-bottom: 2px solid var(--renk-krem-sinir);
+}
+
+.takvim-gun-baslik {
+  padding: var(--bosluk-3) var(--bosluk-2);
+  text-align: center;
+  cursor: pointer;
+  transition: background var(--gecis-hizli);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  border-right: 1px solid var(--renk-krem-sinir);
+}
+
+.takvim-gun-baslik:last-child { border-right: none; }
+.takvim-gun-baslik:hover { background: var(--renk-krem-koyu); }
+.takvim-gun-baslik.bugun { background: var(--renk-krem-koyu); }
+
+.takvim-gun-kisa {
+  font-size: var(--boyut-xs);
+  color: var(--renk-metin-soluk);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.takvim-gun-sayi {
+  font-family: var(--font-baslik);
+  font-size: var(--boyut-lg);
+  font-weight: 700;
+  color: var(--renk-metin);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.takvim-gun-sayi.bugun {
+  background: var(--renk-kahve);
+  color: var(--renk-krem);
+}
+
+.takvim-gun-ay {
+  font-size: var(--boyut-xs);
+  color: var(--renk-metin-soluk);
+}
+
+.takvim-gun-sutunlar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  min-height: 300px;
+}
+
+.takvim-gun-sutun {
+  padding: var(--bosluk-3) var(--bosluk-2);
+  border-right: 1px solid var(--renk-krem-sinir);
+  display: flex;
+  flex-direction: column;
+  gap: var(--bosluk-2);
+}
+
+.takvim-gun-sutun:last-child { border-right: none; }
+
+.takvim-gun-sutun.bugun-sutun {
+  background: rgba(212, 160, 23, 0.04);
+}
+
+.takvim-bos-gun {
+  text-align: center;
+  color: var(--renk-metin-soluk);
+  font-size: var(--boyut-sm);
+  padding-top: var(--bosluk-4);
+}
+
+.takvim-randevu-kart {
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-radius: var(--yuvarlak-md);
+  padding: var(--bosluk-2) var(--bosluk-2);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: opacity var(--gecis-hizli), transform var(--gecis-hizli);
+}
+
+.takvim-randevu-kart:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+.takvim-randevu-saat {
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.takvim-randevu-ad {
+  font-size: var(--boyut-xs);
+  font-weight: 700;
+  color: var(--renk-metin);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.takvim-randevu-hizmet {
+  font-size: 10px;
+  color: var(--renk-metin-ince);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Günlük Görünüm ────────────────────────────────────────────────────────── */
+.takvim-gunluk {
+  display: flex;
+  flex-direction: column;
+}
+
+.takvim-saat-satiri {
+  display: flex;
+  align-items: stretch;
+  min-height: 52px;
+  border-bottom: 1px solid var(--renk-krem-sinir);
+}
+
+.takvim-saat-satiri:last-child { border-bottom: none; }
+
+.takvim-saat-etiket {
+  width: 64px;
+  flex-shrink: 0;
+  padding: var(--bosluk-2) var(--bosluk-3);
+  font-size: var(--boyut-xs);
+  color: var(--renk-metin-soluk);
+  border-right: 1px solid var(--renk-krem-sinir);
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.takvim-saat-icerik {
+  flex: 1;
+  padding: var(--bosluk-1) var(--bosluk-3);
+  display: flex;
+  align-items: center;
+}
+
+.takvim-bos-saat {
+  height: 100%;
+  width: 100%;
+}
+
+.takvim-gunluk-randevu {
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-radius: var(--yuvarlak-md);
+  padding: var(--bosluk-2) var(--bosluk-3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--bosluk-4);
+  transition: opacity var(--gecis-hizli);
+}
+
+.takvim-gunluk-randevu:hover { opacity: 0.85; }
+
+/* ── Modal ─────────────────────────────────────────────────────────────────── */
+.modal-arkaplan {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--bosluk-4);
+}
+
+.modal-kart {
+  background: var(--renk-beyaz);
+  border-radius: var(--yuvarlak-2xl);
+  box-shadow: var(--golge-lg);
+  width: 100%;
+  max-width: 420px;
+  overflow: hidden;
+}
+
+.modal-baslik {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--bosluk-5) var(--bosluk-6);
+  border-bottom: 1px solid var(--renk-krem-sinir);
+}
+
+.modal-baslik h3 { margin: 0; font-size: var(--boyut-lg); }
+
+.modal-kapat {
+  background: none;
+  border: none;
+  font-size: var(--boyut-lg);
+  cursor: pointer;
+  color: var(--renk-metin-soluk);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--gecis-hizli);
+}
+
+.modal-kapat:hover { background: var(--renk-krem-koyu); }
+
+.modal-icerik {
+  padding: var(--bosluk-5) var(--bosluk-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--bosluk-3);
+}
+
+.modal-satir {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--boyut-sm);
+  padding-bottom: var(--bosluk-3);
+  border-bottom: 1px solid var(--renk-krem-sinir);
+}
+
+.modal-satir:last-child { border-bottom: none; padding-bottom: 0; }
+.modal-satir span:first-child { color: var(--renk-metin-ince); }
+
+.modal-butonlar {
+  padding: var(--bosluk-4) var(--bosluk-6);
+  border-top: 1px solid var(--renk-krem-sinir);
+  display: flex;
+  gap: var(--bosluk-3);
+  flex-wrap: wrap;
+}
+
+/* Küçük rozet */
+.rozet-sm {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+}

@@ -1,0 +1,211 @@
+/* ─── Berber Kartı Stilleri ──────────────────────────────────────────────────── */
+.berber-karti {
+  background-color: var(--renk-beyaz);
+  border: 1px solid var(--renk-krem-sinir);
+  border-radius: var(--yuvarlak-xl);
+  overflow: hidden;
+  transition: box-shadow var(--gecis-normal), transform var(--gecis-normal);
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.berber-karti:hover {
+  box-shadow: var(--golge-lg);
+  transform: translateY(-3px);
+  color: inherit;
+}
+
+/* Kapak fotoğrafı alanı */
+.berber-karti-foto {
+  width: 100%;
+  height: 180px;
+  background-color: var(--renk-krem-koyu);
+  position: relative;
+  overflow: hidden;
+}
+
+.berber-karti-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Fotoğraf yoksa placeholder */
+.berber-karti-foto-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background: linear-gradient(135deg, var(--renk-krem-koyu) 0%, var(--renk-krem-sinir) 100%);
+}
+
+/* Kart içeriği */
+.berber-karti-icerik {
+  padding: var(--bosluk-5);
+}
+
+.berber-karti-baslik {
+  font-family: var(--font-baslik);
+  font-size: var(--boyut-lg);
+  font-weight: 700;
+  color: var(--renk-metin);
+  margin-bottom: var(--bosluk-1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.berber-karti-konum {
+  font-size: var(--boyut-sm);
+  color: var(--renk-metin-ince);
+  margin-bottom: var(--bosluk-3);
+  display: flex;
+  align-items: center;
+  gap: var(--bosluk-1);
+}
+
+/* Puan satırı */
+.berber-karti-puan-satiri {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--bosluk-4);
+}
+
+.berber-karti-puan {
+  display: flex;
+  align-items: center;
+  gap: var(--bosluk-2);
+}
+
+.berber-karti-puan-sayi {
+  font-weight: 700;
+  color: var(--renk-metin);
+  font-size: var(--boyut-sm);
+}
+
+.berber-karti-yorum-sayi {
+  font-size: var(--boyut-xs);
+  color: var(--renk-metin-soluk);
+}
+
+/* Hizmetler */
+.berber-karti-hizmetler {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bosluk-2);
+  margin-bottom: var(--bosluk-4);
+}
+
+.berber-hizmet-etiketi {
+  background-color: var(--renk-krem-koyu);
+  color: var(--renk-kahve);
+  font-size: var(--boyut-xs);
+  font-weight: 500;
+  padding: var(--bosluk-1) var(--bosluk-3);
+  border-radius: var(--yuvarlak-tam);
+  white-space: nowrap;
+}
+
+/* ─── Berberler Sayfası ──────────────────────────────────────────────────────── */
+.berberler-sayfa {
+  padding: var(--bosluk-8) 0 var(--bosluk-16);
+}
+
+.berberler-baslik-bolumu {
+  margin-bottom: var(--bosluk-8);
+}
+
+/* Filtre çubuğu */
+.filtre-cubugu {
+  background-color: var(--renk-beyaz);
+  border: 1px solid var(--renk-krem-sinir);
+  border-radius: var(--yuvarlak-xl);
+  padding: var(--bosluk-4) var(--bosluk-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--bosluk-3);
+  margin-bottom: var(--bosluk-8);
+  box-shadow: var(--golge-sm);
+}
+
+@media (min-width: 640px) {
+  .filtre-cubugu {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .filtre-cubugu .form-grup {
+    flex: 1;
+  }
+}
+
+/* Sonuç sayısı */
+.sonuc-bilgisi {
+  font-size: var(--boyut-sm);
+  color: var(--renk-metin-ince);
+  margin-bottom: var(--bosluk-5);
+}
+
+/* Boş durum */
+.bos-durum {
+  text-align: center;
+  padding: var(--bosluk-16) var(--bosluk-4);
+}
+
+.bos-durum-ikon {
+  font-size: 3rem;
+  margin-bottom: var(--bosluk-4);
+}
+
+.bos-durum h3 {
+  font-size: var(--boyut-xl);
+  margin-bottom: var(--bosluk-2);
+  font-family: var(--font-ana);
+  font-weight: 600;
+}
+
+/* Sayfalama */
+.sayfalama {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--bosluk-2);
+  margin-top: var(--bosluk-10);
+}
+
+.sayfalama-btn {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid var(--renk-krem-sinir);
+  border-radius: var(--yuvarlak-md);
+  background: var(--renk-beyaz);
+  color: var(--renk-metin-ince);
+  font-size: var(--boyut-sm);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--gecis-hizli);
+}
+
+.sayfalama-btn:hover:not(:disabled) {
+  border-color: var(--renk-kahve);
+  color: var(--renk-kahve);
+}
+
+.sayfalama-btn.aktif {
+  background-color: var(--renk-kahve);
+  border-color: var(--renk-kahve);
+  color: var(--renk-beyaz);
+}
+
+.sayfalama-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
